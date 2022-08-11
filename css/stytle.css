@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --font-family: 'Open Sans', sans-serif;
+    --font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin-left: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin-top: 210px;
+    border-left: 2px solid #9146FF;
+    background-color: #fffcfc;
+    padding-bottom: 6.5rem;
+}
+
+
+header{
+    width: 100%;
+    height: 110px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+
+.container_header{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+.container_png{ 
+    width: 90px;
+}
+
+.container_title{
+    color: #fff;
+}
+
+.container_links{
+    display: flex;
+    gap: 0.9rem;
+}
+
+.container_links li{
+    color: #fff;
+    list-style: none;
+}
+
+.container_links a{
+    color: #fff;
+    padding: 5px 20px;
+    transition: background-color ease-out 300ms;
+}
+
+.container_links a:hover{
+    background-color: #Fff;
+    color: black;
+    border: 5px solid #fff ;
+    transform: scale(0.5);
+}
+
+
+.link_ini{
+    border: 5px solid #9146FF;
+}
+
+
+.link_reg{
+    background-color: #9146FF;
+    border: 5px solid #9146FF ;
+}
+
+
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(10px);
+}
+
+.icon__menu i{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu__side{
+    width: 80px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid rgb(0, 0, 0);
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* ocultar scroll para chrome safari y opera */
+.menu__side::-webkit-scrollbar{
+    display: none;
+}
+
+/* ocultar scroll para IE, Edge y firefox */
+.menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none:
+}
+
+.name__page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo_lateral{
+    width: 30px;
+    margin-right: 20px;
+}
+.options__menu{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+
+.options__menu a{
+    color: #fff;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+    width: 20px;
+}
+
+.options__menu a:hover{
+    color: #FC9E4F;
+}
+
+.option{
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    position: relative;
+}
+
+.option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.option h4{
+    font-weight: 300;
+    cursor: pointer;
+}
+
+a.selected{
+    color: blueviolet;
+}
+
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: #fff;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+
+
+.body_move{
+    margin-left: 250px;
+}
+
+.menu__side_move{
+    width: 250px;
+}
+
+
+
+/* container main */
+main{
+    color: #fff;
+    border: 0.5rem solid #9146FF;
+    width: 80%;
+    min-width: max-content;
+    padding: 50px;
+    margin: 0 auto;
+    height: 1200px;
+    background-color: black;
+}
+.container_main{
+    background-color: #fff;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.container_titleMain{
+    min-width: 30rem;
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.2rem;
+    background-color: #9146FF;
+    color: black;
+    border-radius: 20px;
+
+}
+
+.container_form_prrecioDolar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 3rem;
+}
+.container_precioDolar{
+    width: 350px;
+    height: 150px;
+    background-color: #D9D9D9;
+    border: 5px solid #000;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+
+
+}
+
+.container_precioDolar h2{
+    color: black;
+    text-align: center;
+}
+
+.container_cambio{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_cambio div{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    color: #000;
+    margin:.5rem .5rem;
+    
+}
+
+.container_tag{
+    color: #FC9E4F;
+}
+
+.precio_dolar{
+    color: #FC9E4F;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/* form donde le pdemos datos al usuario sobre el producto a convertir */
+
+.container_form{
+    color: #000;
+    width: max-content;
+    padding: 3rem;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+
+.container_form form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contianer_inputPrecioproducto input{
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+
+
+.boton_calcularImpuesto{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: #fff;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+
+.boton_calcularImpuesto:hover,
+.button-5:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.boton_calcularImpuesto:hover {
+    transform: translateY(-1px);
+}
+
+.boton_calcularImpuesto:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 760px){
+        .body_move{
+            margin-left: 0px;
+        }
+        
+
+        .menu__side_move{
+            width: 80px;
+            left: -80px;
+        }
+
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tizeGame</title>
+    <link rel="stylesheet" href="./css/stytle.css">
+    <script src="https://kit.fontawesome.com/82faf01a42.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <header>
+
+
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+
+        <div class="container_header">
+            <figure ><img class="container_png" src="./img/logoWhite.png" alt=""></figure>
+            <h1 class="container_title">tizeGame</h1>
+
+            <ul class="container_links">
+                <li><a class="link_ini" href="">Iniciar sesión</a></li>
+                <li><a class="link_reg" href="">Registrarse</a></li>
+            </ul>
+        </div>
+
+
+
+
+    </header>
+
+
+
+    <div class="menu__side" id="menu__side">
+        <div class="name__page">
+            <img class="logo_lateral" src="./img/logoWhite.png" alt="">
+            <h4>tizeGAME</h4>
+        </div>
+        <div class="options__menu">
+
+            <a href="#" class="selected">
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4>Calcular Impuesto</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="fas fa-file" title="Inicio"></i>
+                    <h4>Atajos Gamer</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="fas fa-video" title="Inicio"></i>
+                    <h4>Atajos Mac</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="far fa-sticky-note" title="Inicio"></i>
+                    <h4>Juegos Popular</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="far fa-id-badge" title="Inicio"></i>
+                    <h4>Contacto</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="far fa-address-card" title="Inicio"></i>
+                    <h4>Nosotros</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <div class="container_main">
+            <div class="container_titleMain">
+                <h2 class="title">CALCULAR IMPUESTOS </h2>
+                <h3 class="title_sube">SOBRE COMPRA REALIZADO AFUERA</h3>
+            </div>
+
+            <div class="container_form_prrecioDolar" >
+
+
+
+
+
+
+                <div class="container_form">
+                    <form id="formJuegos">
+
+                        <div class="contianer_inputPrecioproducto">
+                        <label for="nombreJuego"> INGRESA EL PRECIO DEL PRODUCTO EN DOLAR: $</label>
+                        <input type="text"  id="nombreJuego" name="nombre" placeholder="solo numero " > 
+                        </div>
+                        <button type="submit" class="boton_calcularImpuesto" id="resgritarJuego">Calcular  Monto Final</button>
+                    </form>
+
+                </div>
+
+                <div id="divprecio" class="container_precioDolar">
+                </div>
+        
+            </div>
+        
+
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
