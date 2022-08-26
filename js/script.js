@@ -43,7 +43,10 @@ window.addEventListener("resize", function(){
 })
 
 
-//precio dolar
+// aca termina todo lo que tiene que ver con el menu
+
+
+//precio dolar LATERAL DERECHA
 const divprecio = document.getElementById("divprecio")
 const url = 'https://www.dolarsi.com/api/api.php?type=valoresprincipales';
 
@@ -97,20 +100,69 @@ setInterval(() =>{
 
 
 
+// calculando impuestos del productos
+
+const monstrarImpuesto = document.getElementById("monstrarImpuesto")
+async function loadData(){
+    const response = await fetch('https://criptoya.com/api/dolar')
+    const data = await response.json()
+    let precioDolar = data.oficial
+    // const c = dataBlue 
+    console.log(precioDolar + ' sa e pri dola an')
+
+    //map kontrole form nan andan async lan
+
+    const formImpuestos = document.getElementById("formImpuestos")
+    //const precioProductoEndolar = document.getElementById("precioProductoEndolar")
+
+    formImpuestos.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const precioProduct = document.getElementById("precioProductoEndolar").value
+    console.log(precioProduct*2)
+    
+    const impuestopaisYretenciones = 0.75 //se usa multiplicando con el precio ya en dolar y se le suma
+
+    let precioPoductEnpesosSinImpo = precioProduct * precioDolar
+    let montoImpuestopaisYret      = precioPoductEnpesosSinImpo *impuestopaisYretenciones
+    
+    let precioConImpo = precioPoductEnpesosSinImpo+montoImpuestopaisYret
+    
 
 
 
-// generando el form y el calculo de impuesto 
-const urlCryptoya = "https://criptoya.com/api/dolar"
+    const mostrarData = () => {
+        monstrarImpuesto.innerHTML = ''
+        monstrarImpuesto.innerHTML = `
+        <h2>Precio del producto sin impuesto en dolar us: $${precioProduct}</h2>
+        <h2>Precio final con impuesto agregado: $ ${precioConImpo}</h2>
+        
+        <div>
+        <button type="submit" class="btn_jason" id="resgritarJuego"> Guardar el producto </button>
+        <button type="submit" class="btn_jason" id="resgritarJuego"> Monstrar los productos guardado </button>
 
-fetch(urlCryptoya)
-.then(response => response.json())
-.then(({oficial}) => {
-    const dolarOficial = oficial
-    console.log(dolarOficial)
+
+        </div>
+        `
+    }
+    mostrarData()
+
+
+
+
+    formImpuestos.reset()
 })
 
-console.log(dolarOficial)
+
+
+
+
+
+}
+
+loadData()
+
+
+
 
 
 
