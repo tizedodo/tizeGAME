@@ -214,7 +214,7 @@ main{
     min-width: max-content;
     padding: 50px;
     margin: 0 auto;
-    height: 1200px;
+    height: max-content;
     background-color: black;
 }
 .container_main{

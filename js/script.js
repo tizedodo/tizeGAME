@@ -153,10 +153,6 @@ async function loadData(){
 })
 
 
-
-
-
-
 }
 
 loadData()
