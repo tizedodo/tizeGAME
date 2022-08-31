@@ -96,8 +96,8 @@
                     <form id="formImpuestos">
 
                         <div class="contianer_inputPrecioproducto">
-                        <label for="nombreJuego"> INGRESA EL PRECIO DEL PRODUCTO EN DOLAR: $</label>
-                        <input type="number"  id="precioProductoEndolar" name="nombre" placeholder="solo numero " > 
+                        <label for="precioProductoEndolar"> INGRESA EL PRECIO DEL PRODUCTO EN DOLAR: $</label>
+                        <input type="number"  id="precioProductoEndolar"  placeholder="solo numero " > 
                         </div>
                         <button type="submit" class="boton_calcularImpuesto" id="resgritarJuego">Calcular</button>
                     </form>
@@ -109,24 +109,48 @@
         
             </div>
 
+            <div class="container_monstrarImpoYformProducto">
 
-            <div id="monstrarImpuesto" class="container_convercion" >
-            
+                <div id="monstrarImpuesto" class="container_convercion" >
+                </div>
+
+                <div id="container_formProducInfo" class="container_formProducInfo desactivar_divInfoForm">
+                    <h2 class="formInfo_title">Registrar producto</h2>
+
+                    <form id="formInfo_producto" class="formInfo_producto">
+
+                        <div class="juego_form">
+                            <label for="nombreProducto">Nombre del producto:</label>
+                            <input type="text"  class="input_form" id="nombreProducto" name="nombreProducto"> 
+                        </div>
+                        <div class="juego_form">
+                            <label for="imgProducto">Imagen del producto:</label>
+                            <input type="text"  class="input_form" id="imgProducto" name="imgProducto"  placeholder="pega el link de la imagen">
+                        </div>
+
+                        <div class="juego_form">
+                            <label for="precioProducto ">Ingresa el precio:</label>
+                            <input type="number"  class="input_form" id="precioProducto" name="precioProducto"  placeholder="precio con impuesto">
+                        </div>
+                        
+
+                    <button type="submit" class="btn_registrarProducto" id="guargararProducto">Guardar Producto</button>
+                    </form>
+                    <button type="submit" class="btn_jason" id="monstrarProductos"> Monstrar los productos guardado </button>
+                </div>
+                
             </div>
-
-
-
-
-
         </div>
+        
     </main>
+    <div  id="divProductos" class="divProductos_container">
+    </div>
 
 
 
 
 
-
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
